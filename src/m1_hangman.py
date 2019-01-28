@@ -72,10 +72,10 @@ def word_as_a_list(word):
     return wordlist
 
 def turn_to_string(word):
-    strofword=''
+    aword=''
     for k in range(len(word)):
-        strofword = strofword + str(word[k])
-    return strofword
+        aword += str(word[k])
+    return aword
 
 def check_in_word(letter,sequence):
     for k in range(len(sequence)):
