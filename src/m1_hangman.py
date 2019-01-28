@@ -6,9 +6,13 @@ Authors: Zhen Yang and YiCheng Yang.
 def main():
     words = stage_1()
     item = random_stage_1(words)
+    total_change = []
+    for k in range(5):
+        x = stage_2()
+        y = stage_3(x, item)
+        total_change += stage_4(y)
 
-    x = stage_2()
-    stage_3(x , item)
+
 
 
 
@@ -33,16 +37,19 @@ def stage_2():
 
 def stage_3(x,item):
     list = []
+    y = 0
     for k in range(len(item)):
         list.append('-')
     for k in range(len(item)):
         if item[k] == x:
             list[k] = x
+            y = k
     string = ''
     for k in range(len(item)):
         string += list[k]
-    print(string)
-    return(string)
+    return(x, y)
+def stage_4(x):
+    for k in range(x):
 
 
 ####### Do NOT attempt this assignment before class! #######
